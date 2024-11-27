@@ -1,0 +1,233 @@
+/* Dashboard container and background video */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+  position: relative;
+  
+}
+
+#myh3{
+  color:white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Header and navigation */
+.dashboard-header {
+  background-color: rgba(30, 41, 59, 0.8);
+  color: #ffffff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #e2e8f0;
+}
+
+.dashboard-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #93c5fd;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #f87171;
+}
+
+/* Main section */
+.dashboard-main {
+  flex-grow: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #333;
+  border-radius: 8px;
+}
+
+.dashboard-main h3 {
+  font-size: 22px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* Dashboard data container */
+.dashboard-data {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.chart-container {
+  flex: 1;
+  min-width: 600px;  /* Increased from 300px */
+  max-width: 1000px; /* Increased from 600px */
+  height: 400px; /* Set a height for the graph */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-container {
+  flex: 1;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #e2e8f0;
+  font-weight: 600;
+  color: #374151;
+}
+
+.data-table td {
+  color: #374151;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ccc;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Image container and animation */
+#images-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px; /* Add some space between the chart and images */
+  overflow: hidden; /* Hide images that go beyond the container */
+  position: relative;
+}
+
+.product-image {
+  width: 150px; /* Increase the size of the images */
+  height: 150px; /* Increase the size of the images */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  animation: imageCarousel 12s infinite linear; /* Adjust the animation duration */
+}
+
+@keyframes imageCarousel {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  20% {
+    transform: translateX(-120%); /* Move to the left */
+  }
+  40% {
+    transform: translateX(-240%); /* Continue moving left */
+  }
+  60% {
+    transform: translateX(-360%); /* Continue moving left */
+  }
+  80% {
+    transform: translateX(-480%); /* Continue moving left */
+  }
+  100% {
+    transform: translateX(-600%); /* All images have moved left */
+  }
+}
+
+.product-image:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.product-image:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.product-image:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.product-image:nth-child(4) {
+  animation-delay: 6s;
+}
+
+.product-image:nth-child(5) {
+  animation-delay: 8s;
+}
+
+
